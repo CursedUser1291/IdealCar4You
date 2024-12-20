@@ -9,11 +9,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerPersistanceService {
+public class CustomerPersistenceService {
         private String filename = "customer.json";
         private ObjectMapper mapper;
 
-        public CustomerPersistanceService() {
+        public CustomerPersistenceService() {
             mapper = new ObjectMapper();
             mapper.registerModule(new JavaTimeModule());
         }
@@ -35,10 +35,10 @@ public class CustomerPersistanceService {
             return customers;
         }
 
-        public void saveCustomers (List<Customer> employees) {
+        public void saveCustomers (List<Customer> customers) {
             try {
                 File jsonFile = new File(filename);
-                mapper.writeValue(jsonFile, employees);
+                mapper.writeValue(jsonFile, customers);
             } catch (IOException e) {
                 e.printStackTrace();
             }

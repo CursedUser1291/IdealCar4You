@@ -1,17 +1,17 @@
 package IdealCar4You.Models;
 
-import IdealCar4You.Persistance.CustomerPersistanceService;
+import IdealCar4You.Persistance.CustomerPersistenceService;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerModel {
     private List<Customer> customers;
-    private CustomerPersistanceService persistance;
+    private CustomerPersistenceService persistance;
 
     public CustomerModel() {
         customers = new ArrayList<>();
-        persistance = new CustomerPersistanceService();
+        persistance = new CustomerPersistenceService();
         loadCustomers();
     }
 
@@ -42,7 +42,7 @@ public class CustomerModel {
         saveCustomers();
     }
 
-    public void updateEmployees(int index, Customer updatedCustomer) {
+    public void updateCustomer(int index, Customer updatedCustomer) {
         customers.set(index, updatedCustomer);
         saveCustomers();
     }

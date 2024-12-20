@@ -1,8 +1,20 @@
 package IdealCar4You.Models;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import java.time.LocalDate;
 
-public class Vehicle {
+@JsonTypeInfo(
+        use = JsonTypeInfo.Id.NAME,
+        include = JsonTypeInfo.As.EXTERNAL_PROPERTY,
+        property = "type"
+)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = Car.class, name = "car"),
+        @JsonSubTypes.Type(value = Transport.class, name = "transport")
+})
+
+abstract public class Vehicle {
     private String brand;
     private String model;
     private int engineCapacity;
