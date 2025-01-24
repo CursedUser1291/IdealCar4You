@@ -13,6 +13,7 @@ public class UserModel {
         users = new ArrayList<User>();
         persistanceService = new UserPersistenceService();
         seedUsers();
+        loadUsers();
     }
 
     public List<User> getUsers() {
@@ -32,6 +33,10 @@ public class UserModel {
     public void deleteUser(int index) {
         users.remove(index);
         saveUsers();
+    }
+
+    public void loadUsers() {
+        users = persistanceService.readUsers();
     }
 
     public User readUser(int index) {

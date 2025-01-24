@@ -24,7 +24,7 @@ public class UserController {
         return userModel.readUser(index);
     }
 
-    public List<User> readEmployees() {
+    public List<User> readUsers() {
         return userModel.readAllUsers();
     }
 

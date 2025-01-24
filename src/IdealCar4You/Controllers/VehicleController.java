@@ -1,14 +1,14 @@
 package IdealCar4You.Controllers;
 
-import java.util.List;
 import IdealCar4You.Models.VehicleModel;
 import IdealCar4You.Models.Vehicle;
+import java.util.List;
 
 public class VehicleController {
     private VehicleModel vehicleModel;
 
     public VehicleController() {
-        vehicleModel = new VehicleModel();
+        this.vehicleModel = new VehicleModel();
     }
 
     public void addVehicle(Vehicle vehicle) {
@@ -21,10 +21,6 @@ public class VehicleController {
 
     public void deleteVehicle(int index) {
         vehicleModel.deleteVehicle(index);
-    }
-
-    public void saveVehicles() {
-        vehicleModel.saveVehicles();
     }
 
     public List<Vehicle> readAllVehicles() {

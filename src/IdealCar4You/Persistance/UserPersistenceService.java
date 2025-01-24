@@ -50,7 +50,7 @@ public class UserPersistenceService {
             if (!jsonFile.exists() || jsonFile.length() == 0) {
                 List<User> defaultUsers = List.of(
                         new User("Admin", "admin1234","admin"),
-                        new User("CustomerService","service1234", "customerService")
+                        new User("Customer Service","cs1234", "customerService")
                 );
 
                 saveUsers(defaultUsers);

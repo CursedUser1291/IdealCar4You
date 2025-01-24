@@ -100,4 +100,9 @@ public class Customer {
     public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
+
+    @Override
+    public String toString() {
+        return getLastName() + " " + getFirstName();
+    }
 }

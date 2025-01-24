@@ -1,1 +1,1 @@
-[{"name":"Admin","password":"admin1234","role":"admin"},{"name":"CustomerService","password":"service1234","role":"customerService"}]
+[{"name":"Admin","password":"admin1234","role":"admin"},{"name":"Customer Service","password":"cs1234","role":"customerService"}]
